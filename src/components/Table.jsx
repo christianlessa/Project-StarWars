@@ -2,30 +2,32 @@ import React, { useContext } from 'react';
 import contextPlanets from '../context/contextPlanets';
 
 function Table() {
-  const { data } = useContext(contextPlanets);
+  const { data, filter } = useContext(contextPlanets);
+
   return (
-    <header>
-      <table>
-        <thead>
-          <tr>
-            <th>name</th>
-            <th>rotation_period</th>
-            <th>orbital_period</th>
-            <th>diameter</th>
-            <th>climate</th>
-            <th>gravity</th>
-            <th>terrain</th>
-            <th>surface_water</th>
-            <th>population</th>
-            <th>films</th>
-            <th>created</th>
-            <th>edited</th>
-            <th>url</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            data.map((result) => (
+    <table className="allTable">
+      <thead className="topTable">
+        <tr>
+          <th>name</th>
+          <th>rotation_period</th>
+          <th>orbital_period</th>
+          <th>diameter</th>
+          <th>climate</th>
+          <th>gravity</th>
+          <th>terrain</th>
+          <th>surface_water</th>
+          <th>population</th>
+          <th>films</th>
+          <th>created</th>
+          <th>edited</th>
+          <th>url</th>
+        </tr>
+      </thead>
+      <tbody className="responseTable">
+        {
+          data.length !== 0
+          && data.filter((item) => item.name.includes(filter.filterByName.name))
+            .map((result) => (
               <tr key={ result.name }>
                 <td>{result.name}</td>
                 <td>{result.rotation_period}</td>
@@ -42,10 +44,9 @@ function Table() {
                 <td>{result.url}</td>
               </tr>
             ))
-          }
-        </tbody>
-      </table>
-    </header>
+        }
+      </tbody>
+    </table>
   );
 }
 
