@@ -3,7 +3,8 @@ import contextPlanets from '../context/contextPlanets';
 
 function Filters() {
   const { setFilter, filterByNumericValues,
-    setFilterByNumericValues, handleClick } = useContext(contextPlanets);
+    setFilterByNumericValues, handleClick,
+    option, handleClearOption } = useContext(contextPlanets);
 
   const handleChange = ({ target }) => {
     setFilter({
@@ -18,7 +19,7 @@ function Filters() {
   };
 
   const { column, comparison, value } = filterByNumericValues;
-
+  // console.log(column);
   return (
     <header>
       <div>
@@ -35,12 +36,11 @@ function Filters() {
           onChange={ handleSelect }
           value={ column }
           name="column"
+          id="select1"
         >
-          <option>population</option>
-          <option>orbital_period</option>
-          <option>diameter</option>
-          <option>rotation_period</option>
-          <option>surface_water</option>
+          {
+            option.map((opt) => (<option key={ opt }>{ opt }</option>))
+          }
         </select>
         <select
           data-testid="comparison-filter"
@@ -63,7 +63,10 @@ function Filters() {
         <button
           type="button"
           data-testid="button-filter"
-          onClick={ () => handleClick(column, comparison, value) }
+          onClick={ () => {
+            handleClick(column, comparison, value);
+            handleClearOption(column);
+          } }
         >
           Filtrar
         </button>
