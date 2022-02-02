@@ -19,9 +19,8 @@ function Filters() {
   };
 
   const { column, comparison, value } = filterByNumericValues;
-  // console.log(column);
   return (
-    <header>
+    <header className="headerInputs">
       <div>
         <input
           data-testid="name-filter"
@@ -32,6 +31,7 @@ function Filters() {
       </div>
       <div>
         <select
+          className="inputFilters"
           data-testid="column-filter"
           onChange={ handleSelect }
           value={ column }
@@ -61,6 +61,7 @@ function Filters() {
           name="value"
         />
         <button
+          className="btnFilter"
           type="button"
           data-testid="button-filter"
           onClick={ () => {

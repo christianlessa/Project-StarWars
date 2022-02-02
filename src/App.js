@@ -7,7 +7,7 @@ import ProviderPlanets from './context/ProviderPlanets';
 function App() {
   return (
     <ProviderPlanets>
-      <h1>Project Star Wars</h1>
+      <h1 className="project">Project Star Wars</h1>
       <Filters />
       <Table />
     </ProviderPlanets>

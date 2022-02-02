@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap') ;
+
 .App {
   text-align: center;
 }
@@ -48,11 +50,40 @@
 }
 
 .topTable {
-  background-color: purple;
+  background-color: rebeccapurple;
   font-size: large;
+  height: 50px;
   text-align: center;
 }
 
 .responseTable {
   text-align: center;
+}
+
+.headerInputs {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inputFilters {
+  margin-left: 10px;
+}
+
+.project {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  color: aliceblue;
+  display: flex;
+  font-family: ' Supermercado One' , cursive;
+  justify-content: space-evenly;
+  margin: 5px 420px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.btnFilter {
+  background-color: rgb(42, 180, 42);
+  border-radius: 5px;
+  color: aliceblue;
+  font-family: fantasy;
 }
