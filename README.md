@@ -12,11 +12,12 @@
   </summary><br>
 
   - **Tecnologias utilizadas em front-end:** JavaScript, React, React Hooks, context API e    estilização em CSS
+</details>
+
+<details>
   <summary>
     <strong>Como executar o projeto</strong>
   </summary><br>
   
   - **Dentro da pasta do projeto, execute o comando "npm run start":**
 </details>
-
-
