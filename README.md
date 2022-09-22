@@ -1,16 +1,22 @@
-# 🚧 README em construção 🚧
+# Boas vindas ao repositório do projeto Star Wars!
 
-<!-- Olá, Tryber!
+ - **Projeto de criação de tabela de pesquisa de planetas e suas informações, com estilização**
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
+---
 
-É essencial que você preencha esse documento por conta própria, ok?
+# Full Stack
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+<details>
+  <summary>
+    <strong>Habilidades</strong>
+  </summary><br>
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
+  - **Tecnologias utilizadas em front-end:** JavaScript, React, React Hooks, context API e    estilização em CSS
+  <summary>
+    <strong>Como executar o projeto</strong>
+  </summary><br>
+  
+  - **Dentro da pasta do projeto, execute o comando "npm run start":**
+</details>
 
--->
+
